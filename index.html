@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- icono de la pagina -->
+    <link rel="shortcut icon" href="./assets/img/portapapeles.png">
+    
+    <!-- Se agrega la fuente Roboto de google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Se agrega la libreria font awesome -->
+    <!-- Se intenta utilizar la version 6.2.0 pero generaba error al intentar crear interacción con los iconos. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <main>
+
+        <div class="container-titulo">
+            <div class="date">
+                <p id="dia"></p>
+                <p id="fecha"></p>
+            </div>
+            <div class="perfil">
+                <h1>Lista de Tareas</h1>
+            </div>
+
+            <div class="agregar-tarea">
+                <input type="text" id="input-tarea" placeholder="escribe una tarea...">
+                <i id="boton-mas"class="fas fa-plus-circle"></i>
+            </div>
+            <!-- <span>Vamos a cumplir tus metas</span> -->
+        </div>
+
+        <div class="container-tarea">
+            <div class="seccion-tarea">
+                <h3>Tareas pendientes</h3>
+                <ul id="lista">
+                    
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+    
+</body>
+</html>
