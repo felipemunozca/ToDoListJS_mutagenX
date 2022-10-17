@@ -1,0 +1,126 @@
+/* resetear los valores por defecto que tienen los navegadores. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* root es una forma de colocar todas las variables de colores con un nombre,
+asi si realizo un cambio, se cambiaran todos los estilos de inmediato. 
+para utilizar estos colores, se debe hacer escribien var() y entre los parentesis, el nombre de color junto a los dos guienes --*/
+:root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body {
+    /* para crear un degradado de forma manual, se puede hacer con la propiedad linear-gradient. 
+    luego se indica desde que posicion comenzara a degradarse. 
+    y finalmente los colores que utilizare.*/
+    background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+    /* para que la gradiente se vea a pantalla completa, lo hago utilizando la propiedad vh. */
+    height: 100vh;
+    /* Se agrega la fuente  */
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/**** SECCION TITULO ****/
+.container-titulo {
+    /* para vistas en moviles, maximo el 80% */
+    max-width: 80%; 
+    width: 400px;
+    /* dejo el margen en auto para que se centre el contenido. */
+    margin: 0 auto;
+}
+.perfil h1 {
+    color: var(--white);
+}
+.perfil span {
+    color: var(--white);
+}
+#fecha {
+    color:  var(--white);
+    padding: 50px 0 5px 0;
+}
+
+
+/**** SECCION AGREGAR TAREA ****/
+.agregar-tarea {
+    background-color: var(--white);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+    margin: 40px 0;
+}
+.agregar-tarea > input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--white);
+    padding-left: 10px;
+}
+.agregar-tarea > input::placeholder {
+    font-size: 1.1rem;
+    color: var(--purple);
+}
+.agregar-tarea i {
+    font-size: 50px;
+    color: var(--purple);
+}
+.agregar-tarea i:hover {
+    transform: scale(1.1);
+    /* cambia la flecha por la manito. */
+    cursor: pointer;
+}
+
+
+/**** SECCION LISTA DE TAREAS ****/
+.container-tarea {
+    max-width: 80%; 
+    width: 400px;
+    margin: 0 auto;
+}
+.seccion-tarea > h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+.seccion-tarea > ul > li {
+    display: flex;
+    background: linear-gradient(to bottom, var(--blue-dark), var(--green));
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    /* espacio para separar las tareas */
+    margin: 10px 0;
+    color: var(--white);
+}
+.seccion-tarea > ul > li > i {
+    font-size: 24px;
+}
+.seccion-tarea > ul > li > img {
+    font-size: 24px;
+    width: 24px;
+}
+/* cambiar de color los iconos. */
+.seccion-tarea > ul > li > i:hover {
+    color: var(--blue-light);
+    cursor: pointer;
+}
+.seccion-tarea > ul > li > p {
+    font-size: 1.2rem;
+}
+
+/* subrayar una tarea completa. */
+.line-through {
+    text-decoration: line-through 2px;
+    color: var(--blue-light);
+}

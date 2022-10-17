@@ -121,6 +121,7 @@ if (data){
     console.log(LIST);
     id = LIST.length;
     cargarLista(LIST)
+    console.log(LIST)
 } else {
     LIST = [];
     id = 0;
